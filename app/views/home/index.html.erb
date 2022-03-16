@@ -1,0 +1,24 @@
+<% if current_user.present? %>
+  <h2>Account Balance: </h2>
+<% end %>
+  <h2><%= link_to "Nominees", nominees_path %> </h2>
+<% if @nominees.present? %>
+  <table>
+  	<% @nominees.each do |user| %>
+  	  <tr>
+        <td><%= user.email %></td>
+  	  </tr>
+  	<% end %>
+  </table>
+<% end %>
+<% if @account_holders.present? %>
+  <table>
+    <% @account_holders.each do |user| %>
+      <tr>
+        <td><%= user.email %></td>
+        <td><b><%= link_to "Add Nominees", new_nominee_path(user.id) %><b></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
+

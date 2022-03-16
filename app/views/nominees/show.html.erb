@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+<table>
+  <tr>
+    <td><%= @nominee.nominee.email %></td>
+    <td><%= @nominee.weightage %></td>
+  </tr>
+</table>
+
+<%= link_to 'Edit', edit_nominee_path(@nominee) %> |
+<%= link_to 'Back', nominees_path %>
