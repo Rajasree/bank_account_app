@@ -21,7 +21,6 @@ class NomineesController < ApplicationController
 
   # POST /nominees or /nominees.json
   def create
-    binding.pry
     @nominee = Nominee.new(nominee_params)
 
     respond_to do |format|
